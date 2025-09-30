@@ -1,5 +1,4 @@
 build/
 .bundle/
 .gradle/
-*.jar
 kls_database.db
