@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    kotlinOptions.jvmTarget = '11'
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
+
+    defaultConfig {
+        applicationId "org.example.test"
+        minSdk 21
+        compileSdk 35
+        targetSdk 35
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+
+    compileSdkVersion 35
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    namespace 'org.example.test'
+}
+
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.23"
+}
